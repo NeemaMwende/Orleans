@@ -1,0 +1,61 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes logoAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Style for the navbar */
+.navbar {
+    background-color: #333; /* Background color for the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff; /* Text color */
+}
+
+/* Style for the navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px; /* Spacing between each navigation link */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff; /* Text color for the navigation links */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Change link color on hover */
+.nav-links li a:hover {
+    color: #ff6600; /* Change to a different color on hover */
+}
+
+/* Style for the logo with animation */
+.logo a {
+    text-decoration: none;
+    color: #830d0d; /* Text color for the logo */
+    font-size: 24px;
+    font-weight: bold;
+    animation: logoAnimation 2s infinite; /* Apply the animation to the logo */
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.logo {
+    animation: fadeIn 2s;
+}
