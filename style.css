@@ -13,12 +13,15 @@
 
 /* Style for the navbar */
 .navbar {
-    background-color: #333; /* Background color for the navbar */
+    background-color: rgba(250, 184, 241, 0.1); /* Transparent black (adjust alpha as needed) */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    color: #fff; /* Text color */
+    padding: 30px 60px;
+    color: #f01a1a; /* Text color */
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 /* Style for the navigation links */
@@ -28,34 +31,74 @@
 }
 
 .nav-links li {
-    margin-right: 20px; /* Spacing between each navigation link */
+    margin-right: 40px; /* Spacing between each navigation link */
+    transition: transform 0.3s;
 }
 
 .nav-links li a {
     text-decoration: none;
-    color: #fff; /* Text color for the navigation links */
+    color: #b11919; /* Text color for the navigation links */
     font-size: 16px;
     font-weight: bold;
+    justify-content: space-evenly;
 }
 
 /* Change link color on hover */
 .nav-links li a:hover {
     color: #ff6600; /* Change to a different color on hover */
+    transform: translateX(5px); /* Move  5 pixels to the right on hover */
 }
 
 /* Style for the logo with animation */
 .logo a {
     text-decoration: none;
-    color: #830d0d; /* Text color for the logo */
+    color: #cf1919; /* Text color for the logo */
     font-size: 24px;
     font-weight: bold;
     animation: logoAnimation 2s infinite; /* Apply the animation to the logo */
 }
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+
+
+/* Preload animation */
+/* Styles for the loading animation */
+.preload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    transition: opacity 0.5s; /* Add a fade-in effect */
+    opacity: 1;
 }
 
-.logo {
-    animation: fadeIn 2s;
+.circle {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #fff;
+    border-top: 5px solid #007BFF;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
 }
+
+.text {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide the loading animation when content is loaded */
+.loaded .preload {
+    opacity: 0;
+    pointer-events: none;
+}
+

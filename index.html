@@ -4,23 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="family.js">
     <title>New Orleans</title>
  
 </head>
 <body>
+
+    <!-- Loading animation -->
+    <div class="preload" id="preload">
+        <div class="circle"></div>
+        <p class="text">Mystic Family...</p>
+    </div>
+
+
     <nav class="navbar">
         <div class="logo">
             <a href="#">Mystic Falls</a>
         </div>
         <div>
             <ul class="nav-links">
-                <li><a href="/home">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/contacts">Contact</a></li>
-                <li><a href="/profile">Profile</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#profile">Profile</a></li>
             </ul>
         </div>
     </nav>
+
+    <section id="home">
+        <!-- Your home section content goes here -->
+        <div class="home-page"></div>
+    </section>
+
+    <section id="about">
+        <!-- Your about section content goes here -->
+        <div class="about-page"></div>
+    </section>
+
+    <section id="services">
+        <!-- Your services section content goes here -->
+        <div class="services-page">
+            Services
+        </div>
+    </section>
+
+    <section id="contact">
+        <!-- Your contact section content goes here -->
+        <div class="contact-page"></div>
+    </section>
+
+    <section id="profile">
+        <!-- Your contact section content goes here -->
+        <div class="profile-page"></div>
+    </section>
+
+    <script>
+        // After your website content has fully loaded, add the "loaded" class to the body element
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.classList.add("loaded");
+});
+
+    </script>
 </body>
 </html>
