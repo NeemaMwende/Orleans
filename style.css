@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 @keyframes logoAnimation {
@@ -19,7 +20,7 @@
     align-items: center;
     padding: 30px 60px;
     color: #f01a1a; /* Text color */
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     width: 100%;
 }
@@ -28,6 +29,9 @@
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 1rem;
+    font-size: 30px;
+    font-weight: 100px;
 }
 
 .nav-links li {
@@ -101,4 +105,53 @@
     opacity: 0;
     pointer-events: none;
 }
+
+/* Style your contact form and map here */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.contact-form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.map {
+    flex: 1;
+}
+
+/* Style your map container or customize according to the map service you use */
 
