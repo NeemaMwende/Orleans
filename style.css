@@ -94,7 +94,10 @@
     margin-left: 10px;
     font-size: 24px;
 }
-
+.title:hover
+{
+    color: #b11919;
+}
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -106,12 +109,19 @@
     pointer-events: none;
 }
 
+.title
+{
+    text-align: center;
+    padding-bottom: 20px;
+    text-shadow: none;
+}
 /* Style your contact form and map here */
 .contact-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin: 20px;
+    background-color: #bbb5b5;
 }
 
 .contact-form {
@@ -124,6 +134,9 @@
 
 .contact-form h2 {
     margin-bottom: 20px;
+    text-align: center;
+    box-shadow: inset;
+    color: #b11919;
 }
 
 .contact-form label {
@@ -147,6 +160,31 @@
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    width: 100px;
+    font-size: 16px;
+    
+}
+
+.contact-form button:hover
+{
+    opacity: 0.8;
+    background-color: #b11919;
+}
+
+/* Define the initial button styles */
+.gradient-button {
+    background: linear-gradient(90deg, #007BFF, #00CCFF);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Apply a transition to the background property */
+}
+
+/* Define the button styles on hover */
+.gradient-button:hover {
+    background: linear-gradient(90deg, #00CCFF, #007BFF); /* Change the gradient colors */
 }
 
 .map {
@@ -154,4 +192,5 @@
 }
 
 /* Style your map container or customize according to the map service you use */
+
 
