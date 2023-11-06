@@ -37,11 +37,16 @@
         <!-- Your home section content goes here -->
         <div class="home-page">
             <h2 class="title">Welcome to Mystic Falls!</h2>
-
-            <div class="container">
-                
-                </div>
-            </div>
+          <div class="box">
+                <span style="--1:1;"><img src="/Images/images (1).jpg" alt=""></span>
+                <span style="--1:1;"><img src="/Images/images (1).jpg" alt=""></span>
+                <span style="--1:1;"><img src="/Images/images (1).jpg" alt=""></span>
+                <span style="--1:1;"><img src="/Images/images (1).jpg" alt=""></span>
+                <span style="--1:1;"><img src="/Images/images (1).jpg" alt=""></span>
+                <span style="--1:1;"><img src="/Images/images (1).jpg" alt=""></span>
+                <span style="--1:1;"><img src="/Images/images (1).jpg" alt=""></span>
+        </div>
+    </div>
 
         </div>
     </section>
@@ -94,6 +99,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("loaded");
 });
 
+    </script>
+    <script type="text/javascript">
+        let box = document.querySelector('.box');
+        window.onmousemove = function(e){
+            let x = e.clientX/3;
+            box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
+        }
     </script>
 </body>
 </html>
